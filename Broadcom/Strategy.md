@@ -104,9 +104,7 @@ Broadcomが解決しようとした問題：
 
 ## ⚡ 実装された変更内容
 
-### 価格・ライセンス革命
-
-| 変更項目 | 従来 | Broadcom新体制 |
+Broadcom新体制 |
 |----------|------|---------------|
 | **ライセンス形態** | 永続ライセンス | サブスクリプション強制 |
 | **最小コア数** | 16コア | **72コア** |
@@ -424,6 +422,59 @@ Broadcomは顧客の感情的反発と財務的成功を**完全に分離**し�
 
 ---
 
+## 🔧 VCF（VMware Cloud Foundation）とは何か？
+
+### VCFの正体：「統合プライベートクラウドプラットフォーム」
+
+VMware Cloud Foundation (VCF)は、コンピュート、ストレージ、ネットワーキング、クラウド管理機能を単一の自動化されたプラットフォームに統合した高度な統合ソフトウェアスタックです。
+
+### 従来の個別製品 vs VCFバンドル
+
+| 従来の購入方法 | VCFバンドル | 影響 |
+|---------------|-------------|------|
+| **vSphere単体** | vSphere + NSX + vSAN + Aria + HCX + TKG | **すべて強制購入** |
+| **NSX単体** | VCF全体 ($350/コア) | 個別価格からVCFバンドル価格への強制変更 |
+| **vSAN単体** | VCF全体 + ストレージ容量課金 | **二重課金構造** |
+| **個別選択** | **4つのバンドルのみ** | **選択肢を8,000→4に削減** |
+
+### VCF vs VVF（vSphere Foundation）の違い
+
+| 項目 | VVF（vSphere Foundation） | VCF（Cloud Foundation） |
+|------|---------------------------|-------------------------|
+| **ターゲット** | 中小企業向け | エンタープライズ向け |
+| **含まれる製品** | vSphere + Aria Standard + TKG基本 | vSphere + NSX + Aria Enterprise + HCX + SDDC Manager + TKG完全版 |
+| **価格** | $135/コア | $350/コア |
+| **vSAN容量** | 0.25 TiB/コア | 1 TiB/コア |
+| **最小購入** | 72コア | 72コア |
+
+---
+
+## 💡 なぜ「バンドル強制」なのか？
+
+### Broadcomの収益最大化戦略
+
+**従来の問題（Broadcom視点）：**
+```
+個別購入 → 顧客は必要な分だけ購入 → 収益機会の損失
+　├── vSphere のみ購入：$100/コア
+　├── NSX のみ購入：$50/コア  
+　└── 合計：$150/コア
+
+バンドル強制 → 不要な機能も強制購入 → 収益最大化
+　└── VCF一括：$350/コア（2.3倍の売上）
+```
+
+### 顧客の実際の被害
+
+「スタンドアロンのAria SuiteやNSX Security Suiteを購入していた顧客は、個別製品価格ではなくVCFバンドルに$350/コアを支払う必要がある」
+
+**具体例：**
+- **以前**：vSphere + NSX = $150/コア
+- **現在**：VCF強制 = $350/コア
+- **値上げ率**：**233%増**
+
+---
+
 ## 🏁 結論：Broadcom戦略の本質
 
 ### 戦略の核心メッセージ
@@ -446,5 +497,32 @@ Broadcomは実質的に業界にこう宣言している：
 
 ---
 
+## 📚 主要情報源
+
+### 財務・戦略関連
+- [Broadcom Q4 2024財務結果](https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-fourth-quarter-and-fiscal-year-2024)
+- [SiliconANGLE: Broadcom VMware戦略分析](https://siliconangle.com/2024/11/13/broadcoms-vmware-strategy-winning-despite-market-friction-2/)
+- [Constellation Research: Hock Tan戦略解説](https://www.constellationr.com/blog-news/insights/broadcom-ceo-tan-takes-vmware-victory-lap-will-he-go-shopping-again)
+
+### 技術・製品関連
+- [VMware Cloud Foundation公式](https://www.vmware.com/products/cloud-infrastructure/vmware-cloud-foundation)
+- [VCF 9.0新機能詳細](https://blogs.vmware.com/cloud-foundation/2025/06/17/whats-new-in-vmware-cloud-foundation-9-0/)
+- [VCF vs VVF比較ガイド](https://blog.purestorage.com/purely-technical/vcf-vs-vvf-which-is-right-for-your-business/)
+
+### 業界分析・顧客反応
+- [TechTarget: Broadcom変更継続](https://www.techtarget.com/searchDataCenter/news/366617362/VMware-by-Broadcom-changes-to-continue-in-2025)
+- [Forrester: VMware混乱分析](https://www.forrester.com/what-it-means/ep372-vmware-options/)
+- [CIO Dive: 企業IT混乱報告](https://www.ciodive.com/news/broadcom-vmware-acquistion-vcf-private-cloud/733800/)
+
+### 訴訟・法的問題
+- [AT&T vs Broadcom訴訟](https://www.ciodive.com/news/broadcom-att-vmware-settlement-licensing-support-lawsuit/733763/)
+- [The Register: 訴訟詳細](https://www.theregister.com/2024/09/05/att_sues_broadcom_vmware_support/)
+
+### 競合対応・代替案
+- [Nutanix VMware代替戦略](https://www.nutanix.com/vmware-alternative)
+- [VMware代替案包括分析](https://cloudchipr.com/blog/vmware-alternatives)
+
+---
+
 *調査日時：2025年8月25日*  
-*情報源：業界アナリスト報告、公開財務資料、訴訟文書、Broadcom公式発表等を総合*
+*情報源：15の主要メディア、業界アナリスト報告、公開財務資料、訴訟文書、技術文書を総合分析*
